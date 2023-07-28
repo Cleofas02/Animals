@@ -1,0 +1,276 @@
+.animals {
+    text-align: center;
+}
+
+.animals__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+}
+
+.animals__description {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem auto;
+}
+
+.animals__project-title {
+    font-size: var(--size-base);
+    margin-bottom: 1rem;
+}
+
+.animals__img-wrapper {
+    position: relative;
+}
+
+.animals__img-wrapper::after {
+    content: '';
+    background-color: rgba(79, 70, 229, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.animals__img-wrapper:hover::after {
+    background-color: rgba(79, 70, 229, 0);
+}
+
+.animals__project:not(:last-child) {
+    margin-bottom: 5rem;
+}
+
+.animals__project-description1 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem 0;
+}
+
+.animals__project-description2 {
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin-bottom: 1rem;
+}
+
+.animals__project-btn {
+    font-size: var(--size-sm);
+}
+
+.animals__project-subtitle {
+    display: none;
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .animals__title {
+        font-size: var(--size-3xl);
+    }
+
+    .animals__description {
+        font-size: var(--size-base);
+        margin: 1.5rem auto;
+    }
+
+    .animals__project-title {
+        font-size: var(--size-lg);
+        margin-bottom: 1.5rem;
+    }
+
+    .animals__project-description1 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+
+    .animals__project-description2 {
+        font-size: var(--size-base);
+        margin-bottom: 1.5rem;
+    }
+
+    .animals__project-btn {
+        font-size: var(--size-base);
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .animals__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'image1 content1'
+            'content2 image2'
+            'image3 content3'
+            'content4 image4'
+            'image5 content5'
+            'content6 image6';
+        place-items: center;
+    }
+
+    .animals__image1 {
+        grid-area: image1;
+    }
+
+    .animals__image2 {
+        grid-area: image2;
+    }
+
+    .animals__image3 {
+        grid-area: image3;
+    }
+
+    .animals__image4 {
+        grid-area: image4;
+    }
+
+    .animals__image5 {
+        grid-area: image5;
+    }
+
+    .animals__image6 {
+        grid-area: image6;
+    }
+
+    .animals__content1 {
+        grid-area: content1;
+    }
+
+    .animals__content2 {
+        grid-area: content2;
+    }
+
+    .animals__content3 {
+        grid-area: content3;
+    }
+
+    .animals__content4 {
+        grid-area: content4;
+    }
+
+    .animals__content5 {
+        grid-area: content5;
+    }
+
+    .animals__content6 {
+        grid-area: content6;
+    }
+
+    .animals__project {
+        padding: 0 1rem;
+    }
+
+    .animals__project-title {
+        display: none;
+    }
+
+    .animals__project-description1 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+    }
+
+    .animals__project-description2 {
+        font-size: var(--size-xs);
+        margin-bottom: 1em;
+    }
+
+    .animals__project-btn {
+        font-size: var(--size-xs);
+    }
+
+    .animals__project:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .animals__project-subtitle {
+        display: block;
+        font-size: var(--size-base);
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .animals__project-description1 {
+        font-size: var(--size-sm);
+    }
+
+    .animals__project-description2 {
+        font-size: var(--size-sm);
+    }
+
+    .animals__project-btn {
+        font-size: var(--size-sm);
+    }
+
+    .animals__project-subtitle {
+        font-size: var(--size-lg);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .animals__title {
+        font-size: var(--size-4xl);
+    }
+
+    .animals__description {
+        font-size: var(--size-lg);
+    }
+
+    .animals__project-description1 {
+        font-size: var(--size-base);
+    }
+
+    .animals__project-description2 {
+        font-size: var(--size-base);
+    }
+
+    .animals__project-btn {
+        font-size: var(--size-base);
+    }
+
+    .animals__project-subtitle {
+        font-size: var(--size-xl);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .animals__title {
+        font-size: var(--size-5xl);
+    }
+
+    .animals__description {
+        font-size: var(--size-xl);
+        margin: 2rem auto;
+    }
+
+    .animals__project-description1 {
+        font-size: var(--size-lg);
+    }
+
+    .animals__project-description2 {
+        font-size: var(--size-lg);
+    }
+
+    .animals__project-btn {
+        font-size: var(--size-lg);
+    }
+
+    .animals__project-subtitle {
+        font-size: var(--size-2xl);
+    }
+
+    .animals__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .animals__container {
+        width: 70%;
+    }
+}
